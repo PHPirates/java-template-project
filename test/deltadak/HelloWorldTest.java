@@ -1,8 +1,8 @@
 package deltadak;
 
-import static org.junit.Assert.*;
-
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 
 /**
  * Test {@link HelloWorld} class.
@@ -13,7 +13,8 @@ public class HelloWorldTest {
      */
     @Test
     public void testHelloWorld(){
-        HelloWorld helloWorld = new HelloWorld();
-        assertEquals(2, helloWorld.calculate());
+        fail("test fails");
+//        HelloWorld helloWorld = new HelloWorld();
+        assertEquals(2, 1+1, "message");
     }
 }
