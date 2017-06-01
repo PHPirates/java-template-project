@@ -13,12 +13,12 @@ test {
 sourceSets {
     main {
         java {
-            srcDirs 'src'
+            srcDirs 'src/deltadak'
         }
     }
     test {
         java {
-            srcDirs 'test'
+            srcDirs 'test/deltadak'
         }
     }
 }
