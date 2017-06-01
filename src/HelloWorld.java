@@ -1,5 +1,12 @@
+/**
+ * Default Hello class.
+ */
 public class HelloWorld {
 
+    /**
+     * Default main method.
+     * @param args I forgot what these were about.
+     */
     public static void main(String[] args) {
         System.out.println("Hello World!");
     }

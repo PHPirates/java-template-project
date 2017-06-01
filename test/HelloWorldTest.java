@@ -2,10 +2,16 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+/**
+ * Test {@link HelloWorld} class.
+ */
 public class HelloWorldTest {
+    /**
+     * Test {@link HelloWorld#calculate()} method.
+     */
     @Test
-    public void testHellowWorld(){
+    public void testHelloWorld(){
         HelloWorld helloWorld = new HelloWorld();
-        assertEquals(helloWorld.calculate(), 2);
+        assertEquals(2, helloWorld.calculate());
     }
 }
