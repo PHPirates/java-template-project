@@ -13,12 +13,12 @@ test {
 sourceSets {
     main {
         java {
-            srcDirs 'src/deltadak'
+            srcDirs 'src'
         }
     }
     test {
         java {
-            srcDirs 'test/deltadak'
+            srcDirs 'test'
         }
     }
 }
@@ -32,6 +32,11 @@ dependencies {
     // will be needed for junit 5:
     testCompile("org.junit.jupiter:junit-jupiter-api:5.0.0-M4")
     testRuntime("org.junit.vintage:junit-vintage-engine:4.12.0-M4")
+
+//    testCompile("org.junit.platform:junit-platform-gradle-plugin:1.0.0-M3")
+//    testCompile("org.junit.jupiter:junit-jupiter-engine:5.0.0-M3")
+
+
 //    testCompile 'org.hamcrest:hamcrest-all:1.3'
 
 
