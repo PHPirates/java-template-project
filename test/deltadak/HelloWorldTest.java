@@ -13,7 +13,8 @@ public class HelloWorldTest {
      */
     @Test
     public void testHelloWorld(){
-        fail("test fails");
+//        fail("test fails");
+
         HelloWorld helloWorld = new HelloWorld();
         assertEquals(2, helloWorld.calculate(), "message");
     }

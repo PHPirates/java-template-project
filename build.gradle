@@ -1,8 +1,21 @@
 apply plugin: 'java'
+apply plugin: 'org.junit.platform.gradle.plugin'
+
+repositories {
+    mavenCentral()
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath ("org.junit.platform:junit-platform-gradle-plugin:1.0.0-M4")
+    }
+}
 
 test {
     dependsOn 'cleanTest' // run tests every time
-
 }
 
 //tasks.withType(Test) {
@@ -23,15 +36,22 @@ sourceSets {
     }
 }
 
-repositories {
-    mavenCentral()
-}
-
 dependencies {
+
+    testCompile("junit:junit:4.12")
+    testRuntime("org.junit.vintage:junit-vintage-engine:4.12.0-M4")
+
+    testCompile("org.junit.jupiter:junit-jupiter-api:5.0.0-M4")
+    testRuntime("org.junit.jupiter:junit-jupiter-engine:5.0.0-M4")
+
+    // Enable use of the JUnitPlatform Runner within the IDE
+    testCompile("org.junit.platform:junit-platform-runner:1.0.0-M4")
+
+
 //    testCompile 'junit:junit:4.10'
     // will be needed for junit 5:
-    testCompile("org.junit.jupiter:junit-jupiter-api:5.0.0-M4")
-    testRuntime("org.junit.vintage:junit-vintage-engine:4.12.0-M4")
+//    testCompile("org.junit.jupiter:junit-jupiter-api:5.0.0-M4")
+//    testRuntime("org.junit.vintage:junit-vintage-engine:4.12.0-M4")
 
 //    testCompile("org.junit.platform:junit-platform-gradle-plugin:1.0.0-M3")
 //    testCompile("org.junit.jupiter:junit-jupiter-engine:5.0.0-M3")
@@ -50,4 +70,8 @@ test {
     testLogging {
         events "passed", "skipped", "failed"
     }
+}
+
+junitPlatform {
+    details 'tree'
 }
