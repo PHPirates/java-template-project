@@ -14,3 +14,7 @@ It currently makes use of
 * The Gradle wrapper (gradlew)
 
 [Gradle test report](build/reports/tests/test/index.html)
+
+## Tips
+
+If you see all gradle keywords greyed out you may want to link the Gradle project in IntelliJ, if you do not see a popup asking you to then go to modules - import module and select your build.gradle.

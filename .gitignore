@@ -1,0 +1,21 @@
+# This is a gitignore for Java projects.
+*
+!.gitattributes
+!.gitignore
+
+# Java
+!src/
+!test/
+
+# Gradle
+!gradle/
+!gradlew
+!gradlew.bat
+!build.gradle
+
+# Travis
+!.travis.yml
+
+# Misc
+!LICENSE
+!readme.md
