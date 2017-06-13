@@ -4,8 +4,8 @@
 !.gitignore
 
 # Source and test files
-!src/**/*
-!test/**/*
+!src/
+!test/
 
 # Gradle
 !gradle/wrapper/
