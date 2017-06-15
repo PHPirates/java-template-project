@@ -1,5 +1,5 @@
 language: java
-#sudo: required
+# Use the Trusty Beta, because the JDK version of the default is too low.
 dist: trusty
 jdk:
   - oraclejdk8
