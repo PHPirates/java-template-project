@@ -19,9 +19,16 @@ sourceSets {
         java {
             srcDirs 'src'
         }
+        // Needed for possible resources
+        resources {
+            srcDirs 'src' // in the case you have them in the same folder as the source files
+        }
     }
     test {
         java {
+            srcDirs 'test'
+        }
+        resources {
             srcDirs 'test'
         }
     }
