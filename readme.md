@@ -15,7 +15,6 @@ It currently makes use of
 * The Gradle wrapper (gradlew)
 
 ## Tips
-
 * You can quickly import the project into IntelliJ by importing the `build.gradle` file.
 
 * You can run `gradlew test` on the terminal to run the tests via gradle with the gradle wrapper (so you don't have to first install gradle locally by hand).
