@@ -1,52 +1,41 @@
+description = """ 
+Gradle build file written to let Travis access dependencies and build. 
+This uses the gradle wrapper, so when running (the first time) use 'gradlew test' so then it 
+downloads the right gradle automatically.
+Uses JavaFX plugin from https://github.com/FibreFoX/javafx-gradle-plugin
+"""
+
 apply plugin: 'java'
-apply plugin: 'org.junit.platform.gradle.plugin'
 
 repositories {
     mavenCentral()
-}
-
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath ("org.junit.platform:junit-platform-gradle-plugin:1.0.0-M4")
-    }
-}
-
-sourceSets {
-    main {
-        java {
-            srcDirs 'src'
-        }
-        // Needed for possible resources
-        resources {
-            srcDirs 'src' // in the case you have them in the same folder as the source files
-        }
-    }
-    test {
-        java {
-            srcDirs 'test'
-        }
-        resources {
-            srcDirs 'test'
-        }
-    }
+    mavenLocal()
 }
 
 dependencies {
-
-    testCompile("junit:junit:4.12")
-    testRuntime("org.junit.vintage:junit-vintage-engine:4.12.0-M4")
-
-    testCompile("org.junit.jupiter:junit-jupiter-api:5.0.0-M4")
-    testRuntime("org.junit.jupiter:junit-jupiter-engine:5.0.0-M4")
-
-    // Enable use of the JUnitPlatform Runner within the IDE
-    testCompile("org.junit.platform:junit-platform-runner:1.0.0-M4")
-
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.0.3'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.0.3'
 }
 
-junitPlatform {
-    details 'tree'
+sourceSets {
+    main.java.srcDirs += 'src'
+    main.resources.srcDirs += 'src'
+    test.java.srcDirs += 'test'
+    test.resources.srcDirs += 'test'
+}
+
+// Java target version
+sourceCompatibility = 1.8
+
+test {
+    // Enable JUnit 5 (Gradle 4.6+).
+    useJUnitPlatform()
+
+    // Always run tests, even when nothing changed.
+    dependsOn 'cleanTest'
+
+    // Show test results.
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
 }
