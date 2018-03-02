@@ -3,6 +3,7 @@ package deltadak;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ProgressIndicator;
 import javafx.scene.control.Spinner;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
@@ -46,6 +47,18 @@ public class HelloJavaFX extends Application {
      */
     public int calculate() {
         return 1+1;
+    }
+
+    /**
+     * Indicate something is loading.
+     *
+     * @param progressIndicator User wants feedback.
+     *
+     * @return Whether the progress was succesfully set.
+     */
+    public boolean setLoading(ProgressIndicator progressIndicator) {
+        progressIndicator.setVisible(true);
+        return true;
     }
 
 }

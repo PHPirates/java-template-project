@@ -1,5 +1,6 @@
 package deltadak;
 
+import javafx.scene.control.ProgressIndicator;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -17,6 +18,14 @@ class HelloJavaFXTest {
         HelloJavaFX helloJavaFX = new HelloJavaFX();
 
         assertEquals(2, helloJavaFX.calculate(), "message");
+    }
+
+    @Test
+    public void testProgress() {
+        HelloJavaFX helloJavaFX = new HelloJavaFX();
+        ProgressIndicator progressIndicator = new ProgressIndicator();
+
+        assertTrue(helloJavaFX.setLoading(progressIndicator));
     }
 
 }
