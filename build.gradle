@@ -16,6 +16,10 @@ repositories {
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.0.3'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.0.3'
+
+    // Needed for JavaFX tests.
+    testCompile "org.testfx:testfx-core:4.0.12-alpha"
+    testCompile "org.testfx:testfx-junit:4.0.12-alpha"
 }
 
 sourceSets {
