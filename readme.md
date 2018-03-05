@@ -13,6 +13,7 @@ It currently makes use of
 * Travis CI
 * Gradle
 * The Gradle wrapper (gradlew)
+* [TestFX](https://github.com/TestFX/TestFX) to use JavaFX components in tests
 
 ## Tips
 * You can quickly import the project into IntelliJ by importing the `build.gradle` file.
