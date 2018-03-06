@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test
 class KotlinJUnitTest {
 
     @Test
-    fun testHelloWorld() {
+    fun testKotlinJUnit() {
         val helloWorld = HelloWorld()
         assertEquals(2, helloWorld.calculate(), "message")
     }
