@@ -1,0 +1,4 @@
+package deltadak
+
+class KotlinSpekTest {
+}

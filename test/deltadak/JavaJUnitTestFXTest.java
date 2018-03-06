@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 /**
  * Test general JavaFX components.
  */
-public class JavaFXTest extends FxRobot {
+public class JavaJUnitTestFXTest extends FxRobot {
 
     /**
      * Tests that testing JavaFX components works.

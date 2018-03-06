@@ -1,13 +1,13 @@
 package deltadak;
 
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.fail;
 
 /**
  * Test {@link HelloWorld} class.
  */
-public class HelloWorldTest {
+public class JavaJUnitTest {
     /**
      * Test {@link HelloWorld#calculate()} method.
      */
