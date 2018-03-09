@@ -1,25 +1,5 @@
-# This is a gitignore for Java projects.
-*
-!.gitattributes
-!.gitignore
-
-# Source and test files
-!src/**/*.java
-!test
-!test/
-!test/**
-!test/**/*.java
-
-# Gradle
-!gradle/wrapper/gradle-wrapper.jar
-!gradle/wrapper/gradle-wrapper.properties
-!gradlew
-!gradlew.bat
-!build.gradle
-
-# Travis
-!.travis.yml
-
-# Misc
-!LICENSE
-!readme.md
+.gradle/
+.idea/
+build/
+out/
+*.iml
