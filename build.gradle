@@ -1,11 +1,18 @@
 buildscript {
+    ext {
+        // Enable if you want to use your local version of Patrik's plugin.
+        useLocalDependencyPlugin = false
+    }
+
     repositories {
         mavenLocal()
     }
-    dependencies{
-        classpath group: 'se.patrikerdes',
-        name: 'gradle-use-latest-versions-plugin',
-        version: '0.2.1'
+    if (useLocalDependencyPlugin) {
+        dependencies {
+            classpath group: 'se.patrikerdes',
+                    name: 'gradle-use-latest-versions-plugin',
+                    version: '0.2.1'
+        }
     }
 }
 
@@ -16,7 +23,9 @@ plugins {
     id 'com.github.ben-manes.versions' version '0.17.0'
 }
 
-apply plugin: se.patrikerdes.UseLatestVersionsPlugin
+if (useLocalDependencyPlugin) {
+    apply plugin: se.patrikerdes.UseLatestVersionsPlugin
+}
 
 description = """ 
 Gradle build file.
