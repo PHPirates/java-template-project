@@ -1,9 +1,22 @@
+buildscript {
+    repositories {
+        mavenLocal()
+    }
+    dependencies{
+        classpath group: 'se.patrikerdes',
+        name: 'gradle-use-latest-versions-plugin',
+        version: '0.2.1'
+    }
+}
+
 plugins {
     id 'java'
     // Plugin which can update Gradle dependencies, use other/useLatestVersions
-    id 'se.patrikerdes.use-latest-versions' version '0.2.0'
+//    id 'se.patrikerdes.use-latest-versions' version '0.2.1'
     id 'com.github.ben-manes.versions' version '0.17.0'
 }
+
+apply plugin: se.patrikerdes.UseLatestVersionsPlugin
 
 description = """ 
 Gradle build file.
