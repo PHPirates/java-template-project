@@ -57,7 +57,7 @@ sourceSets {
 }
 
 // Java target version
-sourceCompatibility = 1.8
+sourceCompatibility = 1.9
 
 test {
     // Enable JUnit 5 (Gradle 4.6+).
