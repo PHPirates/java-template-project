@@ -57,3 +57,13 @@ test {
         events "passed", "skipped", "failed"
     }
 }
+
+// Test coverage reporting
+jacocoTestReport {
+    // Enable xml for coveralls.
+    reports {
+        html.enabled = true
+        xml.enabled = true
+        xml.destination = "${buildDir}/reports/jacoco/test/jacocoTestReport.xml"
+    }
+}
