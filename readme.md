@@ -17,6 +17,8 @@ It currently makes use of
 * Gradle
 * The Gradle wrapper (gradlew)
 * [TestFX](https://github.com/TestFX/TestFX) to use JavaFX components in tests
+* JaCoCo to generate test coverage reports
+* Coveralls to show some more test coverage statistics
 
 ## Tips
 * You can quickly import the project into IntelliJ by importing the `build.gradle` file.
