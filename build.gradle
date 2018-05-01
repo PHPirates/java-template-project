@@ -1,30 +1,8 @@
-buildscript {
-    ext {
-        // Enable if you want to use your local version of Patrik's plugin.
-        useLocalDependencyPlugin = false
-    }
-
-    repositories {
-        mavenLocal()
-    }
-    if (useLocalDependencyPlugin) {
-        dependencies {
-            classpath group: 'se.patrikerdes',
-                    name: 'gradle-use-latest-versions-plugin',
-                    version: '0.2.1'
-        }
-    }
-}
-
 plugins {
     id 'java'
-    // Plugin which can update Gradle dependencies, use other/useLatestVersions
-//    id 'se.patrikerdes.use-latest-versions' version '0.2.1'
+    // Plugin which can update Gradle dependencies, use help/useLatestVersions
+    id 'se.patrikerdes.use-latest-versions' version '0.2.1'
     id 'com.github.ben-manes.versions' version '0.17.0'
-}
-
-if (useLocalDependencyPlugin) {
-    apply plugin: se.patrikerdes.UseLatestVersionsPlugin
 }
 
 description = """ 
@@ -39,8 +17,8 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.1.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.1.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.2.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.2.0'
 
     // Needed for JavaFX tests.
     testCompile "org.testfx:testfx-core:4.0.13-alpha"
