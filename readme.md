@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/PHPirates/java-template-project.svg?branch=master)](https://travis-ci.org/PHPirates/java-template-project)
+[![Coverage Status](https://coveralls.io/repos/github/PHPirates/java-template-project/badge.svg?branch=master)](https://coveralls.io/github/PHPirates/java-template-project?branch=master)
 
 # Template project for java
 
