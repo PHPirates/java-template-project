@@ -20,6 +20,9 @@ repositories {
 
 dependencies {
 
+    // Code coverage reports, plugin according to official docs.
+    compile 'org.eluder.coveralls:coveralls-maven-plugin:4.3.0'
+
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.2.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.2.0'
 
