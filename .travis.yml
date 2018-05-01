@@ -20,7 +20,7 @@ script:
   - ./gradlew check jacocoTestReport
 
 after_success:
-- ./gradlew jacocoRootReport coveralls
+- ./gradlew jacocoTestReport coveralls
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
