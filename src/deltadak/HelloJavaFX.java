@@ -56,7 +56,7 @@ public class HelloJavaFX extends Application {
      *
      * @return Whether the progress was succesfully set.
      */
-    public boolean setLoading(ProgressIndicator progressIndicator) {
+    public boolean isLoading(ProgressIndicator progressIndicator) {
         progressIndicator.setVisible(true);
         return true;
     }

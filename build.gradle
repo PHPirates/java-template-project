@@ -3,6 +3,8 @@ plugins {
     // Plugin which can update Gradle dependencies, use help/useLatestVersions
     id 'se.patrikerdes.use-latest-versions' version '0.2.1'
     id 'com.github.ben-manes.versions' version '0.17.0'
+    // Test coverage
+//    id 'jacoco'
 }
 
 description = """ 
@@ -17,6 +19,7 @@ repositories {
 }
 
 dependencies {
+
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.2.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.2.0'
 
@@ -25,6 +28,7 @@ dependencies {
     testCompile "org.testfx:testfx-junit:4.0.13-alpha"
     // Only needed for headless testing.
 //    testCompile "org.testfx:openjfx-monocle:8u76-b04" // jdk-9+181 for Java 9
+
 }
 
 sourceSets {
@@ -35,7 +39,8 @@ sourceSets {
 }
 
 // Java target version
-sourceCompatibility = 1.9
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 test {
     // Enable JUnit 5 (Gradle 4.6+).

@@ -29,7 +29,7 @@ public class JavaFXTest extends FxRobot {
 
         ProgressIndicator progressIndicator = new ProgressIndicator();
 
-        assertTrue(helloJavaFX.setLoading(progressIndicator));
+        assertTrue(helloJavaFX.isLoading(progressIndicator));
 
     }
 
