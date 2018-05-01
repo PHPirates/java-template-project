@@ -17,8 +17,9 @@ before_install:
 install: true
 
 script:
-  - ./gradlew check jacocoTestReport
+  - ./gradlew check
 
+# Generate coverage report and upload to coveralls
 after_success:
 - ./gradlew jacocoTestReport coveralls
 
