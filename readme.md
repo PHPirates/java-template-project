@@ -5,7 +5,7 @@
 
 A similar template project in Kotlin is [here](https://github.com/PHPirates/kotlin-template-project).
 
-From an idea by [mcona](https://github.com/mplacona/java-junit-template-project), but now it will be for Gradle, JUnit 5 and JavaFX.
+From an idea by [Marcos Placona](https://github.com/mplacona/java-junit-template-project), but now it will be for Gradle, JUnit 5 and JavaFX.
 
 This is intended for use with IntelliJ.
 
