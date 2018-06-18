@@ -1,5 +1,3 @@
-notification:
-    email: false
 language: java
 
 sudo: false   # Linux OS: run in container
@@ -19,9 +17,11 @@ install: true
 script:
   - ./gradlew check
 
-# Generate coverage report and upload to coveralls
 after_success:
+  # Generate coverage report and upload to coveralls
   - ./gradlew jacocoTestReport coveralls
+  # Also upload to codecov
+  - bash <(curl -s https://codecov.io/bash)
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
