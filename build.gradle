@@ -1,13 +1,13 @@
 plugins {
     id 'java'
     // Plugin which can update Gradle dependencies, use help/useLatestVersions
-    id 'se.patrikerdes.use-latest-versions' version '0.2.13'
-    id 'com.github.ben-manes.versions' version '0.27.0'
+    id 'se.patrikerdes.use-latest-versions' version '0.2.14'
+    id 'com.github.ben-manes.versions' version '0.28.0'
     // Test coverage
     id 'jacoco'
 
     // Upload jacoco coverage reports to coveralls
-    id 'com.github.kt3k.coveralls' version '2.9.0'
+    id 'com.github.kt3k.coveralls' version '2.10.1'
 }
 
 description = """ 
@@ -23,8 +23,8 @@ repositories {
 
 dependencies {
 
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0-RC1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.6.0-RC1'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0-M1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0-M1'
 
     // Needed for JavaFX tests.
     testCompile "org.testfx:testfx-core:4.0.16-alpha"
