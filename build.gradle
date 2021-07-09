@@ -8,6 +8,9 @@ plugins {
 
     // Upload jacoco coverage reports to coveralls
     id 'com.github.kt3k.coveralls' version '2.10.2'
+
+    // https://openjfx.io/openjfx-docs/#gradle
+    id 'org.openjfx.javafxplugin' version '0.0.10'
 }
 
 description = """ 
@@ -23,12 +26,12 @@ repositories {
 
 dependencies {
 
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
 
     // Needed for JavaFX tests.
-    testCompile "org.testfx:testfx-core:4.0.16-alpha"
-    testCompile "org.testfx:testfx-junit:4.0.15-alpha"
+    testImplementation 'org.testfx:testfx-core:4.0.16-alpha'
+    testImplementation "org.testfx:testfx-junit:4.0.15-alpha"
     // Only needed for headless testing.
 //    testCompile "org.testfx:openjfx-monocle:8u76-b04" // jdk-9+181 for Java 9
 
@@ -44,6 +47,11 @@ sourceSets {
 // Java target version
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
+
+javafx {
+    version = "14"
+    modules = [ 'javafx.controls' ]
+}
 
 test {
     // Enable JUnit 5 (Gradle 4.6+).
@@ -62,8 +70,8 @@ test {
 jacocoTestReport {
     // Enable xml for coveralls.
     reports {
-        html.enabled = true
-        xml.enabled = true
-        xml.setDestination(file("${buildDir}/reports/jacoco/test/jacocoTestReport.xml"))
+        html.required.set(true)
+        xml.required.set(true)
+        xml.outputLocation.set(file("${buildDir}/reports/jacoco/test/jacocoTestReport.xml"))
     }
 }
