@@ -22,7 +22,9 @@ after_success:
   # Generate coverage report and upload to coveralls
   - ./gradlew jacocoTestReport coveralls
   # Also upload to codecov
-  - bash <(curl -s https://codecov.io/bash)
+  - curl -Os https://uploader.codecov.io/latest/linux/codecov
+  - chmod +x codecov
+  - ./codecov -t ${CODECOV_TOKEN}
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
